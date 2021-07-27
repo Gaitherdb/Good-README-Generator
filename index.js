@@ -1,11 +1,9 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+var generateMarkdown = require('./utils/generateMarkdown');
 
-// create writeFile function using promises instead of a callback function
 const writeFileAsync = util.promisify(fs.writeFile);
-
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -21,7 +19,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'title',
+            name: 'Title',
             message: "What is your project's title?",
         },
         {
@@ -60,15 +58,17 @@ const promptUser = () => {
     ]);
 };
 
-const generateREADME = (answers) =>
-    `# ${answers.title}`;
+// const generateREADME = (answers) =>
+//     `# ${answers.Title}`;
 
+
+    
 
 
 
 const init = () => {
     promptUser()
-        .then((answers) => writeFileAsync('README.md', generateREADME(answers)))
+        .then((answers) => writeFileAsync('README.md', generateMarkdown(answers)))
         .then(() => console.log('Successfully wrote to README.md'))
         .catch((err) => console.error(err));
 };
