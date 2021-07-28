@@ -2,7 +2,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 var generateMarkdown = require('./utils/generateMarkdown.js');
-
 const writeFileAsync = util.promisify(fs.writeFile);
 
 const promptUser = () => {
