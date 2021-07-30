@@ -57,8 +57,11 @@ function generateMarkdown(data) {
   let licenseSection = renderLicenseSection(data.License);
   return `# ${data.Title}
   ${licenseBadge}
+
   ## Description
+
   ${data.Description}
+
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)${licenseSection}
