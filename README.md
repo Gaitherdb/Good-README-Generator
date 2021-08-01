@@ -32,10 +32,7 @@ https://user-images.githubusercontent.com/83731627/127588494-ecb65274-9a27-4aa9-
   I am the sole author of this repo and I am not currently looking for contributors. If you find an error, please make an issue or contact me directly. 
 
   ## Tests
-  Change your terminal path to the test folder and run the command:
-  ```
-  npm test
-  ```
+  This application does not have any tests.
 
   ## Questions
   If you have any questions about the repo, open an issue or contact me directly at Gaitherdb@gmail.com. You can find more of my work at [Gaitherdb](https://github.com/Gaitherdb).
